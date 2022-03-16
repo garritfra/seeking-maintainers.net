@@ -164,6 +164,10 @@ a.site:focus {
     text-decoration: underline;
 }
 
+.posting__link {
+    font-size: 1.5rem;
+}
+
 .button {
   background: var(--link);
   color: var(--bg) !important;
@@ -344,4 +348,19 @@ img {
 
 .random {
   background: var(--before-green);
+}
+
+.posting {
+    border-bottom: 2px solid var(--text);
+    padding-top: 1em;
+}
+
+.posting-list {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.posting:first-child {
+    border-top: 2px solid var(--text);
 }

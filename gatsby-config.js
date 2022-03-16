@@ -31,6 +31,7 @@ module.exports = {
                           id
                           body
                           title
+                          createdAt
                         }
                       }
                     }

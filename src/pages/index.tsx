@@ -68,8 +68,12 @@ const IndexPage = ({ data }) => {
 
     const renderPosting = (posting: Posting) => {
         return (
-            <li key={posting.id}>
-                <a target="_blank" href={posting.externalIssueUrl}>
+            <li key={posting.id} className="posting">
+                <a
+                    className="posting__link"
+                    target="_blank"
+                    href={posting.externalIssueUrl}
+                >
                     {posting.title}
                 </a>
                 <p>{posting.shortDesciption}</p>
@@ -78,7 +82,7 @@ const IndexPage = ({ data }) => {
     };
 
     const renderPostingList = (postings: Posting[]) => {
-        return <ul>{postings.map(renderPosting)}</ul>;
+        return <ul className="posting-list">{postings.map(renderPosting)}</ul>;
     };
     return (
         <>
@@ -93,7 +97,32 @@ const IndexPage = ({ data }) => {
                 <h1>Seeking Maintainers</h1>
             </header>
 
-            <main>{renderPostingList(postings)}</main>
+            <main>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                    sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+                <p>
+                    <br />
+                </p>
+                <p className="centre">
+                    <a href="/faq" className="button">
+                        Visit FAQ
+                    </a>
+                </p>
+                <p>
+                    <br />
+                </p>
+                {renderPostingList(postings)}
+            </main>
 
             <footer>
                 <p>
