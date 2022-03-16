@@ -9,3 +9,4 @@
 -   [ ] Sorted projects
 -   [ ] Issue template
 -   [ ] Tags
+-   [ ] GH Action pipeline
