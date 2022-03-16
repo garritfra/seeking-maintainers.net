@@ -23,26 +23,65 @@ export const query = graphql`
     }
 `;
 
-interface Posting {
+interface Issue {
     id: string;
     title: string;
     body: string;
 }
 
+interface Posting {
+    id: string;
+    title: string;
+    externalIssueUrl: string;
+    shortDesciption: string;
+}
+
+const getValueForKey = (codeBlock: string, key: string): string | undefined =>
+    codeBlock
+        ?.split("\n")
+        .find((line) => line.startsWith(`${key}:`))
+        ?.replace(`${key}:`, "")
+        .trim();
+
+const parsePosting = (issue: Issue): Posting => {
+    const codeBlock =
+        /(\`{3}[\w|\W]+?\`{3})/.exec(issue.body)?.find(() => true) || "";
+
+    const externalIssueUrl =
+        getValueForKey(codeBlock, "externalIssueUrl") || "";
+    const shortDesciption =
+        getValueForKey(codeBlock, "shortDescription")?.replaceAll('"', "") ||
+        "";
+
+    return {
+        id: issue.id,
+        title: issue.title,
+        externalIssueUrl,
+        shortDesciption,
+    };
+};
+
 const IndexPage = ({ data }) => {
     const postings = data.githubData.data.repository.issues.edges.map(
-        ({ node }) => node as Posting
+        ({ node }) => parsePosting(node)
     );
 
     const renderPosting = (posting: Posting) => {
-        return <li>{posting.title}</li>;
+        return (
+            <li key={posting.id}>
+                <a target="_blank" href={posting.externalIssueUrl}>
+                    {posting.title}
+                </a>
+                <p>{posting.shortDesciption}</p>
+            </li>
+        );
     };
 
     const renderPostingList = (postings: Posting[]) => {
         return <ul>{postings.map(renderPosting)}</ul>;
     };
     return (
-        <body>
+        <>
             <a name="top"></a>
 
             <header>
@@ -71,7 +110,7 @@ const IndexPage = ({ data }) => {
 
                 <a href="#top">^ TOP ^</a>
             </footer>
-        </body>
+        </>
     );
 };
 
