@@ -3,7 +3,7 @@
 ### TODO before launch:
 
 -   [ ] proper README
--   [ ] license
+-   [x] license
 -   [ ] Pretty list of projects
 -   [ ] FAQ
 -   [ ] Sorted projects
