@@ -63,9 +63,9 @@ const parsePosting = (issue: Issue): Posting => {
 };
 
 const IndexPage = ({ data }: any) => {
-    const postings = data.githubData.data.repository.issues.edges.map(
-        ({ node }: any) => parsePosting(node)
-    );
+    const postings = data.githubData.data.repository.issues.edges
+        .map(({ node }: any) => parsePosting(node))
+        .sort((i1: Posting, i2: Posting) => i1.title > i2.title);
 
     const renderPosting = (posting: Posting) => {
         return (
