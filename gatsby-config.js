@@ -32,6 +32,7 @@ module.exports = {
                           body
                           title
                           createdAt
+                          url
                         }
                       }
                     }

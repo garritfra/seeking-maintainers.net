@@ -16,6 +16,7 @@ export const query = graphql`
                                 body
                                 id
                                 title
+                                url
                             }
                         }
                     }
@@ -29,13 +30,14 @@ interface Issue {
     id: string;
     title: string;
     body: string;
+    url: string;
 }
 
 interface Posting {
     id: string;
     title: string;
-    externalIssueUrl: string;
-    shortDesciption: string;
+    url: string;
+    description: string;
 }
 
 const getValueForKey = (codeBlock: string, key: string): string | undefined =>
@@ -49,17 +51,14 @@ const parsePosting = (issue: Issue): Posting => {
     const codeBlock =
         /(\`{3}[\w|\W]+?\`{3})/.exec(issue.body)?.find(() => true) || "";
 
-    const externalIssueUrl =
-        getValueForKey(codeBlock, "externalIssueUrl") || "";
-    const shortDesciption =
-        getValueForKey(codeBlock, "shortDescription")?.replaceAll('"', "") ||
-        "";
+    const description =
+        getValueForKey(codeBlock, "description")?.replaceAll('"', "") || "";
 
     return {
         id: issue.id,
         title: issue.title,
-        externalIssueUrl,
-        shortDesciption,
+        url: issue.url,
+        description,
     };
 };
 
@@ -71,14 +70,10 @@ const IndexPage = ({ data }: any) => {
     const renderPosting = (posting: Posting) => {
         return (
             <li key={posting.id} className="posting">
-                <a
-                    className="posting__link"
-                    target="_blank"
-                    href={posting.externalIssueUrl}
-                >
+                <a className="posting__link" target="_blank" href={posting.url}>
                     {posting.title}
                 </a>
-                <p>{posting.shortDesciption}</p>
+                <p>{posting.description}</p>
             </li>
         );
     };
