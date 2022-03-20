@@ -68,7 +68,7 @@ const FAQPage = () => {
                             this
                         </a>{" "}
                         thread. <a href="https://kevq.uk/">Kev</a> was feeling
-                        burned out about his project and was looking for someone
+                        burnt out about his project and was looking for someone
                         to help him review submissions for the{" "}
                         <a href="https://512kb.club">512kb.club</a>.
                     </p>
