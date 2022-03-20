@@ -26,9 +26,9 @@ which causes the project to show on the index.
 
 -   [x] proper README
 -   [x] license
--   [ ] Pretty list of projects
+-   [x] Pretty list of projects
 -   [x] FAQ
--   [ ] Sorted projects
+-   [x] Sorted projects
 -   [ ] Issue template
 -   [ ] Tags
 -   [ ] GH Action pipeline
