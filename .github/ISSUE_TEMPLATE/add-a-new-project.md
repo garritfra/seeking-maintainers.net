@@ -1,7 +1,7 @@
 ---
 name: Add a new project
 about: Add your project to the list
-title: "[SEEKING MAINTAINERS] <your project name>"
+title: "<your project name>"
 labels: ''
 assignees: ''
 
@@ -31,7 +31,7 @@ assignees: ''
 
 ```yaml
 # A link to the code repository or homepage of the project
-url: ...
+url: "https://github.com/my/repo"
 
 # A short description of your project. The description text of your GitHub repo might fit here nicely
 description: "Lorem Ipsum..."
