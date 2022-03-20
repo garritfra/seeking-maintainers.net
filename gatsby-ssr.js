@@ -10,7 +10,7 @@ export function onRenderBody({ setHeadComponents }) {
         <title key="title">Seeking Maintainers</title>,
         <meta
             name="description"
-            content="The Seeking Maintainers Index"
+            content="A list of open source projects looking for new maintainers"
             key="description"
         />,
     ]);
