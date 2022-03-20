@@ -23,7 +23,7 @@ module.exports = {
                 // token: required by the GitHub API
                 token: process.env.GH_API_TOKEN,
                 graphQLQuery: `query {
-                  repository(name: "seeking-maintainers", owner: "garritfra") {
+                  repository(name: "seeking-maintainers.net", owner: "garritfra") {
                     id
                     issues(first: 100, labels: "seeking-maintainers", states: OPEN) {
                       edges {
