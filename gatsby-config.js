@@ -27,7 +27,7 @@ module.exports = {
                       labels: "seeking-maintainers"
                       states: OPEN
                       orderBy: {field: UPDATED_AT, direction: DESC}
-                      last: 100
+                      first: 100
                     ) {
                       edges {
                         node {
