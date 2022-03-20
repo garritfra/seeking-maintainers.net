@@ -360,3 +360,7 @@ img {
 .posting:first-child {
     border-top: 2px solid var(--text);
 }
+
+.underlined {
+    text-decoration: underline;
+}

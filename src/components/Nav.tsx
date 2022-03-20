@@ -21,6 +21,9 @@ const Nav = (props: NavProps) => {
                 >
                     FAQ
                 </a>
+                <a href="https://github.com/garritfra/seeking-maintainers">
+                    GitHub
+                </a>
             </nav>
             <h1>Seeking Maintainers</h1>
         </header>
