@@ -21,7 +21,10 @@ const Nav = (props: NavProps) => {
                 >
                     FAQ
                 </a>
-                <a href="https://github.com/garritfra/seeking-maintainers">
+                <a
+                    href="https://github.com/garritfra/seeking-maintainers"
+                    target="_blank"
+                >
                     GitHub
                 </a>
             </nav>

@@ -13,7 +13,7 @@ const FAQPage = () => {
                 <h1>Frequently Asked Questions</h1>
                 <p>
                     This page is intended to answer any questions you may have
-                    about joining or maintaining this project. If you still have
+                    about joining or maintaining this list. If you still have
                     unanswered questions after reading this page, please{" "}
                     <a href="https://github.com/garritfra/seeking-maintainers/issues">
                         submit an issue on GitHub
@@ -78,6 +78,22 @@ const FAQPage = () => {
                         help these projects find people willing to do the "dirty
                         work", so that the maintainers can finally get some
                         rest.
+                    </p>
+                </details>
+                <details id="issues">
+                    <summary>I see a problem. How do I get in touch?</summary>
+                    <p>
+                        If you see a problem with this site that we should
+                        address, we encourage you to{" "}
+                        <a href="https://github.com/garritfra/seeking-maintainers/issues">
+                            open an issue on GitHub
+                        </a>
+                        . If you prefer to talk in private or want to leave some
+                        feedback, I'm happy to hear from you via{" "}
+                        <a href="mailto:garrit@slashdev.space?subject=Seeking Maintainers">
+                            e-mail
+                        </a>
+                        .
                     </p>
                 </details>
             </main>

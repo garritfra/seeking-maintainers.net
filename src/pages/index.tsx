@@ -92,23 +92,27 @@ const IndexPage = ({ data }: any) => {
 
             <main>
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                    nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Maintaining a project that is used by hundreds, thousands or
+                    even millions of people can be stressful. Replying to
+                    issues, merging pull requests and answering questions in
+                    forums is a vital part of every open source project, but it
+                    takes a lot of time and energy, especially if you also work
+                    full-time in your day job.
+                </p>
+                <p>
+                    This list is an index of open source projects seeking new
+                    maintainers. If you find a project that sounds interesting
+                    and you're looking for a way to help out, feel free to take
+                    a look at their posting and apply as a maintainer. If you
+                    maintain a project yourself and feel stressed out, you're
+                    more than welcome to add it to this list.
                 </p>
                 <p>
                     <br />
                 </p>
                 <p className="centre">
                     <a href="/faq" className="button">
-                        Visit FAQ
+                        Visit FAQ for more details
                     </a>
                 </p>
                 <p>
