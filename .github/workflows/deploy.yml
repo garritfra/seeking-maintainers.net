@@ -1,0 +1,33 @@
+on:
+  issues:
+    types: [opened, edited, closed, reopened, deleted, labeled, unlabeled]
+  push:
+    branches:
+      - main
+name: Deploy to Github Pages
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        name: Checkout
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v2.1.7
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
+      - name: Build
+        run: |
+          npm run build
+          touch public/.nojekyll
+          echo "seeking-maintainers.net" > CNAME
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          branch: gh-pages
+          folder: public
