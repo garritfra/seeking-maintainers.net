@@ -22,17 +22,6 @@ Please bear with us while a moderator reviews your submission. After your
 submission is approved, the "seeking-maintainer" label is assigned to the issue,
 which causes the project to show on the index.
 
-### TODO before launch:
-
--   [x] proper README
--   [x] license
--   [x] Pretty list of projects
--   [x] FAQ
--   [x] Sorted projects
--   [x] Issue template
--   [ ] Tags
--   [ ] GH Action pipeline
-
 ### License
 
 This project is licensed under the [MIT license](./LICENSE). We do not own any
