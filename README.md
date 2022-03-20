@@ -29,7 +29,7 @@ which causes the project to show on the index.
 -   [x] Pretty list of projects
 -   [x] FAQ
 -   [x] Sorted projects
--   [ ] Issue template
+-   [x] Issue template
 -   [ ] Tags
 -   [ ] GH Action pipeline
 
