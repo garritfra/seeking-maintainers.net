@@ -23,7 +23,12 @@ module.exports = {
                 graphQLQuery: `query {
                   repository(name: "seeking-maintainers.net", owner: "garritfra") {
                     id
-                    issues(first: 100, labels: "seeking-maintainers", states: OPEN) {
+                    issues(
+                      labels: "seeking-maintainers"
+                      states: OPEN
+                      orderBy: {field: UPDATED_AT, direction: DESC}
+                      last: 100
+                    ) {
                       edges {
                         node {
                           id
