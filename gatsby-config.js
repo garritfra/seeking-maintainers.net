@@ -21,7 +21,7 @@ module.exports = {
             resolve: `gatsby-source-github-api`,
             options: {
                 // token: required by the GitHub API
-                token: process.env.GITHUB_TOKEN,
+                token: process.env.GH_API_TOKEN,
                 graphQLQuery: `query {
                   repository(name: "seeking-maintainers", owner: "garritfra") {
                     id
