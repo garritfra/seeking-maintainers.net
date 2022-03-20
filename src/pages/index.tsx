@@ -1,6 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import "../styles/index.css";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 export const query = graphql`
     {
@@ -61,9 +63,9 @@ const parsePosting = (issue: Issue): Posting => {
     };
 };
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data }: any) => {
     const postings = data.githubData.data.repository.issues.edges.map(
-        ({ node }) => parsePosting(node)
+        ({ node }: any) => parsePosting(node)
     );
 
     const renderPosting = (posting: Posting) => {
@@ -86,16 +88,7 @@ const IndexPage = ({ data }) => {
     };
     return (
         <>
-            <a name="top"></a>
-
-            <header>
-                <nav>
-                    <a href="/" className="current">
-                        Home
-                    </a>
-                </nav>
-                <h1>Seeking Maintainers</h1>
-            </header>
+            <Nav currentTab="home" />
 
             <main>
                 <p>
@@ -124,21 +117,7 @@ const IndexPage = ({ data }) => {
                 {renderPostingList(postings)}
             </main>
 
-            <footer>
-                <p>
-                    Seeking Maintainers was created by{" "}
-                    <a href="https://garrit.xyz">Garrit Franke</a> and was
-                    inspired by{" "}
-                    <a href="https://up-for-grabs.net/">up-for-grabs.net</a>.
-                </p>
-
-                <p>
-                    Maintained with &hearts; by Garrit Franke for a thriving
-                    open source ecosystem.
-                </p>
-
-                <a href="#top">^ TOP ^</a>
-            </footer>
+            <Footer />
         </>
     );
 };
