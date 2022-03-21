@@ -80,6 +80,40 @@ const FAQPage = () => {
                         rest.
                     </p>
                 </details>
+                <details id="removing">
+                    <summary>
+                        I found a new maintainer. How should I proceed?
+                    </summary>
+                    <p>
+                        Awesome! We just made the open source ecosystem a bit
+                        better! 🎉🎊
+                    </p>
+                    <p>
+                        To remove the listing on this page, simply{" "}
+                        <a href="https://github.com/garritfra/seeking-maintainers.net/issues">
+                            close your issue
+                        </a>{" "}
+                        in our GitHub repository. Our robot will then take care
+                        of cleaning up the confetti (I promise, he's getting
+                        paid well!).
+                    </p>
+                </details>
+                <details id="tracking">
+                    <summary>Does this site track me?</summary>
+                    <p>
+                        We use a self-hosted instance of{" "}
+                        <a href="https://plausible.io/">Plausible</a> to track
+                        basic metrics for this site. Plausible is free and open
+                        source software, and all data lives on our own servers.
+                    </p>
+                    <p>
+                        If you're interested, you can also take a look at our{" "}
+                        <a href="https://analytics.slashdev.space/seeking-maintainers.net">
+                            public dashboard
+                        </a>
+                        !
+                    </p>
+                </details>
                 <details id="issues">
                     <summary>I see a problem. How do I get in touch?</summary>
                     <p>
