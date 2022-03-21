@@ -10,7 +10,9 @@ assignees: ''
 ### About the project
 
 <!-- A description about your project. What does it do? Why did you build it? -->
-<!-- Please also include a link to your page or repo, so that people can quickly take a look at the project -->
+
+<!-- Please also add a link to your page or repo, so that people can quickly take a look at the project -->
+**Link**: 
 
 ### Why I need help
 
