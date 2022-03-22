@@ -22,6 +22,13 @@ Please bear with us while a moderator reviews your submission. After your
 submission is approved, the "seeking-maintainer" label is assigned to the issue,
 which causes the project to show on the index.
 
+## Chat
+
+If you have any questions or want to get involved, feel free to join our room on
+Matrix:
+
+https://matrix.to/#/#seeking-maintainers:matrix.org
+
 ### License
 
 This project is licensed under the [MIT license](./LICENSE). We do not own any
