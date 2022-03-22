@@ -21,6 +21,18 @@ export const query = graphql`
                         }
                     }
                 }
+                topic {
+                    repositories {
+                        edges {
+                            node {
+                                id
+                                url
+                                name
+                                description
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -65,7 +77,18 @@ const parsePosting = (issue: Issue): Posting => {
 const IndexPage = ({ data }: any) => {
     const postings = data.githubData.data.repository.issues.edges
         .map(({ node }: any) => parsePosting(node))
-        .sort((i1: Posting, i2: Posting) => i1.title < i2.title ? 1 : -1);
+        .sort((i1: Posting, i2: Posting) => (i1.title < i2.title ? 1 : -1));
+
+    const githubTopicPostings = data.githubData.data.topic.repositories.edges
+        .map(({ node }: any) => node)
+        .map(
+            ({ id, url, name, description }: any): Posting => ({
+                id,
+                url,
+                title: name,
+                description,
+            })
+        );
 
     const renderPosting = (posting: Posting) => {
         return (
@@ -114,6 +137,21 @@ const IndexPage = ({ data }: any) => {
                     <br />
                 </p>
                 {renderPostingList(postings)}
+                <p>
+                    <br />
+                </p>
+                <h1>Other projects seeking maintainers</h1>
+                <p>
+                    This list shows even more projects looking for maintainers.
+                    It is generated from projects in the{" "}
+                    <a href="https://github.com/topics/maintainer-wanted">
+                        maintainer-wanted
+                    </a>{" "}
+                    topic on GitHub. Unlike the projects above, we cannot verify
+                    if these projects are still actively looking for new
+                    maintainers.
+                </p>
+                {renderPostingList(githubTopicPostings)}
             </main>
 
             <Footer />

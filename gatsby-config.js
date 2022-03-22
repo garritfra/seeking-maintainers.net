@@ -40,6 +40,18 @@ module.exports = {
                       }
                     }
                   }
+                  topic(name: "maintainer-wanted") {
+                    repositories(first: 20) {
+                      edges {
+                        node {
+                          id
+                          url
+                          name
+                          description
+                        }
+                      }
+                    }
+                  }
                 }`,
 
                 variables: {},
