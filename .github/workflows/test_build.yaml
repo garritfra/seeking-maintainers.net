@@ -18,5 +18,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm install
       - name: Build
+        env:
+          GH_API_TOKEN: ${{ github.token }}
         run: |
           npm run build
