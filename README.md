@@ -22,6 +22,60 @@ Please bear with us while a moderator reviews your submission. After your
 submission is approved, the "seeking-maintainer" label is assigned to the issue,
 which causes the project to show on the index.
 
+## Contributing to the seeking maintainers website
+
+### Getting Started
+
+Before you start contributing, please follow these steps to set up your development environment:
+
+1. **Fork the Repository:** Click the "Fork" button at the top-right corner of this repository to create a copy of the project in your GitHub account.
+
+2. **Clone Your Fork:** Clone your forked repository to your local machine using Git. Replace `<your-username>` with your GitHub username:
+
+   ```shell
+   git clone https://github.com/<your-username>/seeking-maintainers.net
+   ```
+
+3. **Install Dependencies:** Navigate to the project's directory and install the required dependencies:
+
+   ```shell
+   cd <project-directory>
+   npm install
+   ```
+
+4. **Run the Development Server:** Start the development server to preview your changes:
+
+   ```shell
+   npm start
+   ```
+
+The website should now be accessible locally at http://localhost:3000.
+
+### Making Changes
+
+Once you have set up your development environment, you can start making changes to the website:
+
+1. **Create a New Branch:** Before you begin working on a feature or bug fix, create a new Git branch for your changes:
+
+   ```shell
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make Your Changes:** Make the necessary code changes, add new features, or fix bugs.
+
+3. **Commit Your Changes:** When you are satisfied with your changes, commit them using Git:
+
+   ```shell
+   git add .
+   git commit -m "Add your descriptive commit message here"
+   ```
+
+4. **Push to Your Fork:** Push your changes to your GitHub fork:
+
+   ```shell
+   git push origin feature/your-feature-name
+   ```
+
 ## Chat
 
 If you have any questions or want to get involved, feel free to join our room on
